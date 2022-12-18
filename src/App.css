@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap');
+
+:root{
+  --typeFirst: helvetica, arial, sans-serif;
+  --typeSecond: "spectral", Georgia;
+  --darkColor: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  color: var(--darkColor);
+  font-family: var(--typeFirst);
+  padding-top: 4rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button {
+  display: block;
+  font-size: 1rem;
+  font-family: var(--typeFirst);
+  color: var(--darkColor);
+}
+
+label {
+  display: block;
+}
+a{
+  color: var(--darkColor);
+}
+
+.container{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mainContainer{
+  margin-top: 2rem;
+}
+
+.title{
+  margin: 1rem 0;
+  font-size: 3rem;
+  line-height: 1;
+  position: relative;
+  font-family: var(--typeSecond);
+  z-index: 0;
+}
+
+.title::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  bottom: 5px;
+  left: -5px;
+  border-radius: .2rem;
+  background-color: #fb1;
+  z-index: -1;
+}
+
+.enter{
+  opacity: 0;
+  transform: translate(-20px);
+  animation: enter 0.3s forwards;
+}
+
+@keyframes enter {
+  to {
+    opacity: 1;
+    transform: translate(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.global{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: calc(100vh + 10rem);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main{
+  flex:1
 }
