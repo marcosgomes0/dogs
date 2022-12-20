@@ -3,7 +3,6 @@ import useFetch from "../../hooks/useFetch"
 import useForm from "../../hooks/useForm"
 import Button from "../form/Button"
 import Input from "../form/Input"
-import Error from "../interface/Error"
 import Head from "../interface/Head"
 
 
@@ -20,7 +19,7 @@ const LoginPasswordLost = () =>{
 
 
 const login = useForm()
-const { request, error, loading, data } = useFetch()
+const { request, loading, data } = useFetch()
 const location = window.location.href.replace('perdeu', 'resetar')
 
 
