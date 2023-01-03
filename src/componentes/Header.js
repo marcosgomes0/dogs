@@ -1,7 +1,7 @@
 import React from 'react'
 import Styles from './Header.module.css'
 import { Link } from 'react-router-dom'
-import { ReactComponent as Logo } from '../../Assets/dogs.svg'
+import { ReactComponent as Logo } from '../Assets/dogs.svg'
 import { UseContext } from '../useContext'
 
 const Header = () =>{
